@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+$skyColor: #9BE2FF;
+$brightColor: #1C8DFF;
+$darkColor: #00366C;
+$textColor: #C6E3FF;
+
+.header {
+    background-color: $skyColor;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    h1 {
+        margin: 0;
+        font-size: 12em;
+        font-family: 'Finger Paint', fantasy;
+        color: #000;
+        text-align: center;
+        transform: translateY(-25%);
+
+        &::after {
+            display: inline-block;
+            content: 'Moony';
+            color: $brightColor;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 4em;
+            line-height: 1em;
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1200px) {
+            font-size: 8em;
+            line-height: 1em;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            transform: translateY(0);
+        }
+    }
+    
+    img {
+        position: absolute;
+        bottom: 0;
+        image-rendering: pixelated;
+
+        &.goose {
+            left: 50%;
+            width: 40%;
+            transform: translate(-50%, -10%);
+        }
+
+        &.waves {
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    .down {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        z-index: 1;
+        color: $textColor;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+        transition: .2s ease;
+
+        @keyframes current-idle {
+            0%  { width: 1.5em; height: 1.5em; opacity: 1; }
+            10% { width: 3em; height: 3em; opacity: 0; }
+        }
+        
+        @keyframes current-active {
+            from  { width: 1.5em; height: 1.5em; opacity: 1; }
+            to    { width: 3em; height: 3em; opacity: 0; }
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            background-color: $brightColor;            
+            z-index: -1;
+            opacity: 0;
+            animation: current-idle 4s ease 0s infinite forwards;
+        }
+        
+        &::after {
+            content: '';
+            background-color: $darkColor;
+            width: 1.5em;
+            height: 1.5em;
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid $brightColor;
+            box-shadow: 0 0 3px $darkColor;
+            z-index: -1;
+        }
+        
+        &:hover, &:active {
+            transform: scale(1.1);
+
+            &:before {
+                animation: current-active 1s ease 0s infinite forwards;
+            }
+        }
+
+        &:active {
+            outline: none;
+
+            &::before {
+                animation: current-active .6s ease 0s infinite forwards;
+            }
+        }
+    }
+}
+
+.article {
+    .sea {
+        display: block;
+        width: 100%;
+        image-rendering: pixelated;
+        z-index: -1;
+    }
+    
+    .content {
+        display: block;
+        background-color: $darkColor;
+        color: $textColor;
+        font-family: 'Lato', sans-serif;
+        padding-bottom: 50px;
+
+        @media only screen and (max-width: 600px) {
+            padding-top: 50px;
+        }
+
+        & > div {
+            width: 60%;
+            margin: 0 auto;
+
+            @media only screen and (max-width: 600px) {
+                width: 70%;
+            }
+
+            & > :first-child {
+                margin-top: 0;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: normal;
+                color: $skyColor;
+            }
+    
+            h1 {
+                font-size: 2.5em;
+                line-height: 1em;
+                margin: 0;
+                margin-top: .5em;
+                display: flex;
+                align-items: center;
+    
+                &::before {
+                    content: '# ';
+                    font-size: .6em;
+                    vertical-align: middle;
+                    color: $brightColor;
+                }
+            }
+    
+            h3 {
+                margin-top: 0;
+                margin-left: .8em;
+                font-size: 1.4em;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1.2em;
+                margin-left: .8em;
+            }
+
+            a {
+                color: $brightColor;
+            }
+        }
+    }
+}

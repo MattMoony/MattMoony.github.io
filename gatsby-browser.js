@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+const React = require('react');
+const Meta = require('./src/components/Meta').default;
 
-// You can delete this file if you're not using it
+exports.wrapPageElement = ({ element, props }) => {
+  return <Meta {...props}>{element}</Meta>;
+};
