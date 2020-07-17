@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
-
 $skyColor: #9BE2FF;
 $brightColor: #1C8DFF;
 $darkColor: #00366C;
@@ -189,10 +186,14 @@ $textColor: #C6E3FF;
                 font-size: 1.4em;
             }
 
-            p {
+            & > p, & > ul {
                 margin: 0;
                 font-size: 1.2em;
                 margin-left: .8em;
+            }
+
+            ul {
+                margin: 0;
             }
 
             a {

@@ -1,0 +1,46 @@
+$textColor: #C6E3FF;
+$darkestColor: #001B36;
+$brightColor: #1C8DFF;
+
+.footer {
+    padding: 7.5px;
+    background-color: $darkestColor;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: $textColor;
+    
+    & > div {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        & > div {
+            & > a {
+                font-size: 2em;
+                color: inherit;
+                transition: .2s ease;
+                margin: 0 5px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                &:hover {
+                    color: $brightColor !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+$backColor: #085098;
+$brightColor: #1C8DFF;
+$darkColor: #00366C;
+$darkestColor: #062a4e;
+
+.projectWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .project {
+        background-color: $backColor;
+        display: inline-block;
+        width: 45%;
+        min-width: 350px;
+        margin: 5px;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        box-shadow: 0 0 5px $darkestColor;
+        cursor: pointer;
+        transition: .2s ease;
+
+        h2 {
+            margin: 0;
+            font-size: 1.3em;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid $brightColor;
+        }
+
+        p {
+            margin: 0;
+            margin-top: 5px;
+        }
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 5px $darkColor;
+        }
+    }
+}
