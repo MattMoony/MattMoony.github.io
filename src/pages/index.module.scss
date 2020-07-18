@@ -6,7 +6,7 @@ $darkestColor: #062a4e;
 .projectWrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
 
     .project {
@@ -26,6 +26,7 @@ $darkestColor: #062a4e;
             margin: 0;
             font-size: 1.3em;
             padding-bottom: 5px;
+            margin-bottom: 5px;
             border-bottom: 1.5px solid $brightColor;
         }
 
