@@ -18,7 +18,7 @@ export default class Index extends React.Component {
             Just like every other personal blog / personal webpage / portfolio this website will, at some point, contain a lot of information about who I
             am, what I do, what I want to do, etc. However, depending on when you view this, that moment might still be quite far away, since I only started
             working on this new project of mine on the <u>17<sup>th</sup> July 2020</u>. <br /><br />
-            Now, without further ado, I will let you do it! I sincerely wish you a pleasant stay on my newly created website!
+            Now, without further ado, I will let you to it! I sincerely wish you a pleasant stay on my newly created website!
           </p>
           <h1>Projects</h1>
           <h3>What have you done?</h3>
