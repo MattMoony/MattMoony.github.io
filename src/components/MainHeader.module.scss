@@ -1,7 +1,61 @@
 $skyColor: #9BE2FF;
 $brightColor: #1C8DFF;
 $darkColor: #00366C;
+$darkestColor: #001B36;
 $textColor: #C6E3FF;
+
+.banner {
+    position: fixed;
+    width: 100%;
+    background-color: $darkestColor;
+    box-shadow: 0 1px 5px $darkColor;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: .2s ease;
+
+    &.visible {
+        transform: translateY(0);
+    }
+
+    & > div {
+        width: 95%;
+        padding: 12.5px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        & > img {
+            width: 4em;
+            height: 4em;
+            border: 2.5px solid $brightColor;
+            border-radius: 50%;
+        }
+
+        & > h1 {
+            display: inline-block;
+            margin: 0;
+            margin-left: .4em;
+            font-family: 'Finger Paint', fantasy;
+            color: $textColor;
+
+            @keyframes name-change {
+                from { content: 'Moony'; }
+                to { content: 'hias'; }
+            }
+
+            &::after {
+                display: inline-block;
+                content: 'Moony';
+                color: $brightColor;
+                animation: name-change 3s normal 0s infinite forwards;
+            }
+        }
+    }
+}
 
 .header {
     background-color: $skyColor;

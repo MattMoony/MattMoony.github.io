@@ -16,15 +16,17 @@ $brightColor: #1C8DFF;
         align-items: center;
         margin: 0 auto;
         box-sizing: border-box;
+        padding: 2.5px 0;
 
         @media only screen and (max-width: 600px) {
             width: 100%;
-            padding: 0 10px;
+            padding: 2.5px 10px;
         }
 
         & > div {
             & > a {
-                font-size: 2em;
+                display: inline-block;
+                font-size: 1.8em;
                 color: inherit;
                 transition: .2s ease;
                 margin: 0 5px;
@@ -39,6 +41,7 @@ $brightColor: #1C8DFF;
     
                 &:hover {
                     color: $brightColor !important;
+                    transform: scale(1.1);
                 }
             }
         }
