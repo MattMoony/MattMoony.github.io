@@ -16,6 +16,15 @@ module.exports = {
         path: path.join(__dirname, `src`, `projects`),
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `MattMoony.github.io`,
+        short_name: `MattMoony`,
+        start_url: `/`,
+        icon: `src/images/goose.png`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
