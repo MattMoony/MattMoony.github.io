@@ -42,16 +42,9 @@ $textColor: #C6E3FF;
             font-family: 'Finger Paint', fantasy;
             color: $textColor;
 
-            @keyframes name-change {
-                from { content: 'Moony'; }
-                to { content: 'hias'; }
-            }
-
-            &::after {
+            & > span {
                 display: inline-block;
-                content: 'Moony';
                 color: $brightColor;
-                animation: name-change 3s normal 0s infinite forwards;
             }
         }
     }
@@ -75,9 +68,8 @@ $textColor: #C6E3FF;
         text-align: center;
         transform: translateY(-25%);
 
-        &::after {
+        & > span {
             display: inline-block;
-            content: 'Moony';
             color: $brightColor;
         }
 

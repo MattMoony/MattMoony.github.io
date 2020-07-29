@@ -2,6 +2,7 @@ import React from 'react';
 import style from './MainHeader.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Typed from 'react-typed';
 
 import gooseGIF from '../images/goose.gif';
 import wavesGIF from '../images/waves.gif';
@@ -50,11 +51,27 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
         <header className={style.banner + " " + (this.state.banner ? style.visible : '')}>
           <div>
             <img src={gooseJPG} alt="Me - *technically not*" />
-            <h1>Matt</h1>
+            <h1>
+              Matt<span><Typed
+               strings={['Moony', 'hias',]}
+               typeSpeed={100}
+               backSpeed={90}
+               backDelay={3000}
+               loop={true}
+              /></span>
+            </h1>
           </div>
         </header>
         <div ref={e => this.header = e} className={style.header}>
-          <h1>Matt</h1>
+          <h1>
+            Matt<span><Typed
+              strings={['Moony', 'hias',]}
+              typeSpeed={100}
+              backSpeed={90}
+              backDelay={3000}
+              loop={true}
+            /></span>
+          </h1>
           <img className={style.goose} src={gooseGIF} alt="Swimming Goose - *honk*" />
           <img className={style.waves} src={wavesGIF} alt="Waves - *sploosh*" />
           <button onClick={this.onScroll.bind(this)} ref={e => this.scroll = e} className={style.down}><FontAwesomeIcon icon={faChevronDown} /></button>
