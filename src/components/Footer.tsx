@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
       <footer className={style.footer}>
         <div>
           <div>
-            &copy; 2020 Matthias Monschein
+            &copy; 2021 Matthias Monschein
           </div>
           <div>
             <a href="https://github.com/MattMoony/"><FontAwesomeIcon icon={faGithub} /></a>
