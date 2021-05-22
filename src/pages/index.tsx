@@ -3,7 +3,7 @@ import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer';
 
 import style from './index.module.scss';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 
 export default class Index extends React.Component {
   public render (): React.ReactElement {
@@ -22,7 +22,11 @@ export default class Index extends React.Component {
           </p>
           <h1>Projects</h1>
           <h3>What have you done?</h3>
-          <div className={style.projectWrapper}>
+          <p>
+            Well, to answer that question, I'd suggest you go over to the <Link to={`/blog`}>blog</Link> part of this website
+            right now. I hope you will manage to find <i>something</i> of interest over there!
+          </p>
+          {/* <div className={style.projectWrapper}>
             <StaticQuery
               query={graphql`
               {
@@ -46,7 +50,7 @@ export default class Index extends React.Component {
                 </div>
               ))}
             />
-          </div>
+          </div> */}
           <h1>References</h1>
           <h3>Anything else?</h3>
           <ul>

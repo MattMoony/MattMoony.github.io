@@ -1,0 +1,18 @@
+$darkColor: #00366C;
+$darkestColor: #062a4e;
+$evenDarkerColor: #041f3a;
+
+.root {
+
+    & > div {
+        display: inline-flex;
+        align-items: center;
+        margin-right: .2em;
+
+        & > i {
+            font-size: .8em;
+            margin-right: .2em;
+            color: $evenDarkerColor;
+        }
+    }
+}
