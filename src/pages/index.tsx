@@ -30,15 +30,17 @@ export default class Index extends React.Component {
                   nodes {
                     frontmatter {
                       title
-                      slug
                       desc
+                    }
+                    fields {
+                      slug
                     }
                   }
                 }
               }
               `}
               render={data => data.allMarkdownRemark.nodes.map(f => (
-                <div className={style.project} key={f.frontmatter.slug}>
+                <div className={style.project} key={f.fields.slug}>
                   <h2>{f.frontmatter.title}</h2>
                   <p>{f.frontmatter.desc}</p>
                 </div>

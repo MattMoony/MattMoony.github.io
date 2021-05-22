@@ -1,5 +1,4 @@
 ---
-slug: "/projects/pretty-graph-algorithms"
 date: "2020-07-18"
 title: "Pretty Graph Algorithms"
 desc: "Algorithms on graphs displayed in a pretty manner - try popular algorithms like Breadth First Search, Dijkstra, etc. with a visual representation. ✨"

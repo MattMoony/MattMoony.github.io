@@ -11,6 +11,7 @@ import gooseJPG from '../images/goose.jpg';
 
 interface MainHeaderProps {
   children?: React.ReactElement|React.ReactElement[];
+  hideHeader?: boolean;
 }
 
 interface MainHeaderState {
@@ -48,7 +49,12 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
   public render (): React.ReactElement {
     return (
       <>
-        <header className={style.banner + " " + (this.state.banner ? style.visible : '')}>
+        <header 
+          className={style.banner + " " + (this.props.hideHeader || this.state.banner ? style.visible : '')}
+          style={{
+            position: this.props.hideHeader ? 'relative' : 'fixed',
+          }}  
+        >
           <div>
             <img src={gooseJPG} alt="Me - *technically not*" />
             <h1>
@@ -62,7 +68,13 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
             </h1>
           </div>
         </header>
-        <div ref={e => this.header = e} className={style.header}>
+        <div 
+          ref={e => this.header = e} 
+          className={style.header}
+          style={{
+            display: this.props.hideHeader ? 'none' : 'flex',
+          }}
+        >
           <h1>
             Matt<span><Typed
               strings={['Moony', 'hias',]}
@@ -77,8 +89,19 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
           <button onClick={this.onScroll.bind(this)} ref={e => this.scroll = e} className={style.down}><FontAwesomeIcon icon={faChevronDown} /></button>
         </div>
         <article ref={e => this.article = e} className={style.article}>
-          <img className={style.sea} src={seaGIF} alt="Underwater - *Under the seaaaa*" />
-          <div className={style.content}>
+          <img 
+            className={style.sea} 
+            src={seaGIF} 
+            alt="Underwater - *Under the seaaaa*" 
+            style={{
+              display: this.props.hideHeader ? 'none' : 'block',
+            }}
+          />
+          <div className={style.content}
+            style={{
+              paddingTop: this.props.hideHeader ? '1.2em' : '0',
+            }}
+          >
             <div>
               {this.props.children}
             </div>
