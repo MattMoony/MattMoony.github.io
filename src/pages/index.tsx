@@ -11,7 +11,7 @@ export default class Index extends React.Component {
       <>
         <MainHeader>
           <h1>About</h1>
-          <h3>Where have I landed here?</h3>
+          <h6>Where have I landed here?</h6>
           <p>
             Welcome, Willkommen, Bienvenidos! You have reached my (<a href="https://github.com/MattMoony">@MattMoony</a>) official website - I hope you
             have enjoyed your visit so far :P. <br /><br />
@@ -21,7 +21,7 @@ export default class Index extends React.Component {
             Now, without further ado, I will let you to it! I sincerely wish you a pleasant stay on my newly created website!
           </p>
           <h1>Projects</h1>
-          <h3>What have you done?</h3>
+          <h6>What have you done?</h6>
           <p>
             Well, to answer that question, I'd suggest you go over to the <Link to={`/blog`}>blog</Link> part of this website
             right now. I hope you will manage to find <i>something</i> of interest over there!
@@ -52,7 +52,7 @@ export default class Index extends React.Component {
             />
           </div> */}
           <h1>References</h1>
-          <h3>Anything else?</h3>
+          <h6>Anything else?</h6>
           <ul>
             <li><a href="https://github.com/MattMoony/MattMoony.github.io">Official Repository</a> - Here you can find the source code of what you're currently viewing.</li>
             <li><a href="https://www.piskelapp.com/">Piskel</a> - If you want to create lovely pixel art like what you're seeing above.</li>

@@ -1,0 +1,31 @@
+$skyColor: #9BE2FF;
+$brightColor: #1C8DFF;
+$darkColor: #00366C;
+$darkestColor: #001B36;
+$textColor: #C6E3FF;
+
+.heading {
+    display: flex;
+    align-items: center;
+    color: $skyColor;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    & > div {    
+        & > p {
+            padding-left: .4em;
+            font-size: .9em !important;
+        }
+    }
+
+
+    & > img {
+        height: 10em;
+
+        @media only screen and (max-width: 600px) {
+            margin-top: .5em;
+        }
+    }
+}

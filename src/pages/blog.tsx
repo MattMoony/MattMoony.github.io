@@ -16,11 +16,14 @@ const Blog = ({ data, }) => {
                     '/blog': 'Blog',
                 }} />
                 <h1>Blog</h1>
-                <h3>Projects, &#x1f4a9;posts, ...</h3>
+                <h6>Projects, &#x1f4a9;posts, ...</h6>
                 <div>
                     {posts.map(p => 
                         <Link to={p.fields.slug} className={style.post}>
-                            <h4>{p.frontmatter.title}</h4>
+                            <h3>
+                                {p.frontmatter.title}
+                                <span>{p.frontmatter.date}</span>
+                            </h3>
                             <p>{p.frontmatter.desc}</p>
                         </Link>)}
                 </div>
@@ -34,11 +37,12 @@ export default Blog;
 
 export const query = graphql`
     {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             nodes {
                 frontmatter {
                     title
                     desc
+                    date(fromNow: true)
                 }
                 fields {
                     slug

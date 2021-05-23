@@ -13,13 +13,22 @@ $textColor: #c6e3ff;
     border-radius: 3px;
     margin: .2em 0;
 
-    & > h4 {
-        margin: 0;
-        font-size: 1.2em;
+    & > h3 {
+        margin: 0 !important;
+        align-items: baseline !important;
+
+        &::before {
+            display: none;
+        }
+
+        & > span {
+            font-size: .6em;
+            margin-left: .3em;
+        }
     }
 
     & > p {
-        margin: 0;
+        margin: 0 !important;
         color: $textColor;
     }
 

@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "mattmoony.github.io",
+  "description": "MattMoony's homepage & blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Matthias M. <m4ttm00ny@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -16,6 +15,8 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-plugin-typescript": "^2.4.15",
+    "gatsby-remark-autolink-headers": "^4.2.0",
+    "gatsby-remark-images": "^5.2.1",
     "gatsby-remark-vscode": "^3.2.1",
     "gatsby-source-filesystem": "^2.3.19",
     "gatsby-transformer-remark": "^2.8.25",
@@ -34,9 +35,11 @@
     "typescript": "^3.9.7"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "homepage",
+    "blog"
   ],
-  "license": "0BSD",
+  "license": "GPL-3.0",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
@@ -48,9 +51,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/MattMoony/MattMoony.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/MattMoony/MattMoony.github.io/issues"
   }
 }

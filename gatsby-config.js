@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: path.join(__dirname, `src`, `blog`, `projects`),
+        name: `blog`,
+        path: path.join(__dirname, `src`, `blog`),
       },
     },
     {
@@ -32,10 +32,11 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: `One Dark Pro`,
-              extensions: [`material-theme`,],
+              theme: `Abyss`,
             },
           },
+          `gatsby-remark-images`,
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },

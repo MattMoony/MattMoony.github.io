@@ -3,6 +3,7 @@ date: "2020-07-20"
 title: "ConvNet - MNIST Dataset"
 desc: "Simple convolutional neural network (purely numpy) to classify the original MNIST dataset. My first project with a convnet. 🖼"
 ref: "MattMoony/convnet_mnist"
+tags: [project, github, convnet, ann, ai]
 ---
 ## About
 

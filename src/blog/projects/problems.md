@@ -3,6 +3,7 @@ date: "2020-07-18"
 title: "Problems"
 desc: "Many problems ... and just as many solutions. Algorithmic problem solving is one of my favourite free time activities at the moment. 🦆"
 ref: "MattMoony/problems"
+tags: [project, github, problems, algorithm, challenges]
 ---
 ## About
 

@@ -3,6 +3,8 @@ date: "2020-07-18"
 title: "Figaro"
 desc: "Real-time voice-changer for voice-chat, etc. Will support many different voice-filters and features in the future. 🎵"
 ref: "MattMoony/figaro"
+coverImage: "../../images/projects/figaro.png"
+tags: [project, github, voice-changer, music, discord]
 ---
 ## About
 

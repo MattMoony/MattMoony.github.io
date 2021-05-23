@@ -201,8 +201,12 @@ $textColor: #C6E3FF;
             width: 60%;
             margin: 0 auto;
 
-            @media only screen and (max-width: 600px) {
+            @media only screen and (max-width: 1000px) {
                 width: 70%;
+            }
+            
+            @media only screen and (max-width: 600px) {
+                width: 85%;
             }
 
             & > :first-child {
@@ -214,41 +218,98 @@ $textColor: #C6E3FF;
                 font-weight: normal;
                 color: $skyColor;
             }
-    
-            h1 {
-                font-size: 2.5em;
+
+            h1, h2, h3, h4, h5 {
                 line-height: 1em;
-                margin: 0;
-                margin-top: .5em;
+                margin: .5em 0;
                 display: flex;
                 align-items: center;
-    
+
                 &::before {
-                    content: '# ';
-                    font-size: .6em;
+                    content: '#';
+                    margin-right: .1em;
                     vertical-align: middle;
                     color: $brightColor;
                 }
             }
     
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 0;
+    
+                &::before {
+                    font-size: .6em;
+                }
+            }
+
+            h2 {
+                font-size: 2em;
+
+                &::before {
+                    font-size: .6em;
+                }
+            }
+
             h3 {
+                font-size: 1.6em;
+
+                &::before {
+                    font-size: .5em;
+                }
+            }
+
+            h4 {
+                font-size: 1.2em;
+
+                &::before {
+                    font-size: .4em;
+                }
+            }
+
+            h5 {
+                font-size: 1.1em;
+
+                &::before {
+                    font-size: .3em;
+                }
+            }
+    
+            h6 {
                 margin-top: 0;
+                margin-bottom: .5em;
                 margin-left: .8em;
                 font-size: 1.4em;
             }
 
-            & > p, & > ul {
-                margin: 0;
+            p, ul {
+                margin: .5em 0;
                 font-size: 1.2em;
                 margin-left: .8em;
             }
 
             ul {
-                margin: 0;
+                & > li {
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1em;
+                }
+
+                ul {
+                    margin: 0;
+                    font-size: 1em;
+                }
             }
 
             a {
                 color: $brightColor;
+            }
+
+            hr {
+                border: 1.5px solid $brightColor;
+                margin: 1em 0;
             }
         }
     }
