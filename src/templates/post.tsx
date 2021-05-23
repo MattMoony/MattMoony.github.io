@@ -1,16 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
 import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer';
 import BreadCrumbs from '../components/BreadCrumbs';
 
-const Post = ({ data }) => {
+const Post = ({ data, location, }) => {
     const post = data.markdownRemark;
+
     const links: { [url: string]: string } = {
         '/': 'Home',
         '/blog': 'Blog',
     };
-    links[window.location.pathname] = post.frontmatter.title;
+    links[location.pathname] = post.frontmatter.title;
 
     return (
         <>
