@@ -1,4 +1,29 @@
+$backColor: #085098;
+$brightColor: #1C8DFF;
+$darkColor: #00366C;
+$darkestColor: #062a4e;
+$textColor: #c6e3ff;
 
 .post {
+    display: block;
     text-decoration: none;
+    color: inherit;
+    padding: 15px;
+    background-color: $darkestColor;
+    border-radius: 3px;
+    margin: .2em 0;
+
+    & > h4 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    & > p {
+        margin: 0;
+        color: $textColor;
+    }
+
+    &:focus {
+        outline: none;
+    }
 }

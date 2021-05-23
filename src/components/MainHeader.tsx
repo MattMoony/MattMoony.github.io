@@ -3,6 +3,7 @@ import style from './MainHeader.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
+import { Link } from 'gatsby';
 
 import gooseGIF from '../images/goose.gif';
 import wavesGIF from '../images/waves.gif';
@@ -55,7 +56,7 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
             position: this.props.hideHeader ? 'relative' : 'fixed',
           }}  
         >
-          <div>
+          <Link to="/">
             <img src={gooseJPG} alt="Me - *technically not*" />
             <h1>
               Matt<span><Typed
@@ -66,7 +67,7 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
                loop={true}
               /></span>
             </h1>
-          </div>
+          </Link>
         </header>
         <div 
           ref={e => this.header = e} 

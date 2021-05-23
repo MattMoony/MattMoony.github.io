@@ -19,11 +19,9 @@ const Blog = ({ data, }) => {
                 <h3>Projects, &#x1f4a9;posts, ...</h3>
                 <div>
                     {posts.map(p => 
-                        <Link to={p.fields.slug}>
-                            <div className={style.post}>
-                                <h4>{p.frontmatter.title}</h4>
-                                <p>{p.frontmatter.desc}</p>
-                            </div>
+                        <Link to={p.fields.slug} className={style.post}>
+                            <h4>{p.frontmatter.title}</h4>
+                            <p>{p.frontmatter.desc}</p>
                         </Link>)}
                 </div>
             </MainHeader>

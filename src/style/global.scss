@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
 
+$backColor: #085098;
+$brightColor: #1C8DFF;
+$darkColor: #00366C;
+$darkestColor: #062a4e;
+$textColor: #c6e3ff;
+
 html, body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
+    background-color: $darkColor;
 
     #___gatsby {
         width: 100%;

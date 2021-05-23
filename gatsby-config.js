@@ -25,11 +25,24 @@ module.exports = {
         icon: `src/images/goose.png`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: `One Dark Pro`,
+              extensions: [`material-theme`,],
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
   ],
 };
