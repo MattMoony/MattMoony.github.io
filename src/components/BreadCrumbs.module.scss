@@ -1,5 +1,8 @@
+$skyColor: #9BE2FF;
+$brightColor: #1C8DFF;
 $darkColor: #00366C;
-$darkestColor: #062a4e;
+$darkestColor: #001B36;
+$textColor: #C6E3FF;
 $evenDarkerColor: #041f3a;
 
 .root {
@@ -7,12 +10,13 @@ $evenDarkerColor: #041f3a;
     & > div {
         display: inline-flex;
         align-items: center;
-        margin-right: .2em;
+        vertical-align: middle;
 
         & > i {
-            font-size: .8em;
-            margin-right: .2em;
-            color: $evenDarkerColor;
+            font-size: .5em;
+            margin: 0 .5em;
+            color: $brightColor;
+            vertical-align: middle;
         }
     }
 }

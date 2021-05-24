@@ -17,7 +17,7 @@ const Blog = ({ data, }) => {
                 }} />
                 <h1>Blog</h1>
                 <h6>Projects, &#x1f4a9;posts, ...</h6>
-                <div>
+                <div className={style.posts}>
                     {posts.map(p => 
                         <Link to={p.fields.slug} className={style.post}>
                             <h3>

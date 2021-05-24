@@ -13,7 +13,7 @@ const BreadCrumbs = ({ links }: BreadCrumbsProps) => {
 
     return (
         <div className={style.root}>
-            {Object.keys(links).map(l => <div><i><FontAwesomeIcon icon={faChevronRight} /></i> <Link to={l}>{links[l]}</Link></div>)}
+            {Object.keys(links).map(l => <div><i><FontAwesomeIcon icon={faChevronRight} /></i><Link to={l}>{links[l]}</Link></div>)}
         </div>
     );
 };
