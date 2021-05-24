@@ -5,7 +5,7 @@ import BreadCrumbs from '../components/BreadCrumbs';
 import { graphql } from 'gatsby';
 import Footer from '../components/Footer';
 
-import profilePic from '../images/me.jpg';
+import profilePic from '../images/censored.png';
 import pythonIQ from '../images/about/python-iq.png';
 import javascriptIQ from '../images/about/javascript-iq.png';
 import cssIQ from '../images/about/css-iq.png';
