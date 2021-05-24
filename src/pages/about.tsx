@@ -15,6 +15,10 @@ const About = ({ data, }) => {
     return (
         <>
             <MainHeader hideHeader>
+                <BreadCrumbs links={{
+                    '/': 'Home',
+                    '/about': 'About',
+                }} />
                 <div className={style.profile}>
                     <img src={profilePic} />
                     <h1>Matthias Monschein</h1>
