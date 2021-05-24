@@ -1,0 +1,54 @@
+$skyColor: #9BE2FF;
+$brightColor: #1C8DFF;
+$notSoBrightColor: #1767b8;
+$darkColor: #00366C;
+$darkestColor: #001B36;
+$textColor: #C6E3FF;
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+        width: auto;
+        height: 10em;
+        border-radius: 50%;
+        border: 4px solid $brightColor;
+        filter: grayscale(45%);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        align-items: baseline !important;
+    }
+}
+
+.darker {
+    color: $notSoBrightColor;
+    font-size: .8em;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: auto;
+        max-height: 8em;
+        margin: .5em;
+        transition: .2s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    a {
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+}
