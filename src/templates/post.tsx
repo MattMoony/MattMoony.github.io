@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import style from './post.module.scss';
-
+import { Helmet } from 'react-helmet';
 import MainHeader from '../components/MainHeader';
 import Footer from '../components/Footer';
 import BreadCrumbs from '../components/BreadCrumbs';
@@ -17,6 +17,17 @@ const Post = ({ data, location, }) => {
 
     return (
         <>
+            <Helmet>
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@MattMoony" />
+                <meta name="twitter:title" content={post.frontmatter.title} />
+                <meta name="twitter:description" content={post.frontmatter.desc} />
+                {
+                    post.frontmatter.coverImage
+                    ? <meta name="twitter:image" content={post.frontmatter.coverImage} />
+                    : <></>
+                }
+            </Helmet>
             <MainHeader hideHeader>
                 <BreadCrumbs links={links} />
                 <div className={style.heading}>
