@@ -24,7 +24,7 @@ const Post = ({ data, location, }) => {
                 <meta name="twitter:description" content={post.frontmatter.desc} />
                 {
                     post.frontmatter.coverImage
-                    ? <meta name="twitter:image" content={post.frontmatter.coverImage} />
+                    ? <meta name="twitter:image" content={post.frontmatter.coverImage.childImageSharp.fluid.src} />
                     : <></>
                 }
             </Helmet>
