@@ -1,8 +1,4 @@
-$skyColor: #9BE2FF;
-$brightColor: #1C8DFF;
-$darkColor: #00366C;
-$darkestColor: #001B36;
-$textColor: #C6E3FF;
+@import '../style/colors';
 
 .heading {
     display: flex;

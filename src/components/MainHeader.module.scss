@@ -1,13 +1,9 @@
-$skyColor: #9BE2FF;
-$brightColor: #1C8DFF;
-$darkColor: #00366C;
-$darkestColor: #001B36;
-$textColor: #C6E3FF;
+@import '../style/colors';
 
 .banner {
     position: fixed;
     width: 100%;
-    background-color: $darkestColor;
+    background-color: $darkerDarkestColor;
     box-shadow: 0 1px 5px $darkColor;
     z-index: 10;
     display: flex;

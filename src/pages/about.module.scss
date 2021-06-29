@@ -1,9 +1,4 @@
-$skyColor: #9BE2FF;
-$brightColor: #1C8DFF;
-$notSoBrightColor: #1767b8;
-$darkColor: #00366C;
-$darkestColor: #001B36;
-$textColor: #C6E3FF;
+@import '../style/colors';
 
 .profile {
     display: flex;
